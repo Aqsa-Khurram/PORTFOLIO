@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .button a {
+  text-decoration: none;
+  color: #343a40;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar .button a:hover {
+  color: #ffc107;
+}
+
+/* Hero Section */
+.content {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 5rem;
+  color: #212529;
+}
+
+/* Profile image */
+.image img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #343a40;
+  display: block;
+  margin: 2rem auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Intro paragraph */
+.intro {
+  max-width: 600px;
+  margin: 2rem auto;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #495057;
+}
+
+/* Section cards */
+.aboutme .item {
+  background: white;
+  padding: 1.2rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  background-color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+  color: #6c757d;
+}
+
+.pedge img.size {
+  width: 28px;
+  margin: 0 8px;
+  transition: transform 0.3s ease;
+}
+.pedge img.size:hover {
+  transform: scale(1.15);
+}
+
+body.dark-mode .modal-content {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .close-btn {
+  color: #f1f1f1;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+button, a {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .intro, .aboutme .item {
+    margin: 1rem 1.5rem;
+  }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .navbar {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode a {
+  color: #ffc107;
+}
+
+body.dark-mode .button a:hover {
+  color: #fff;
+}
+
+body.dark-mode .foot,
+body.dark-mode footer {
+  background-color: #1f1f1f;
+  color: #ccc;
+}
+
+body.dark-mode .pedge img {
+  filter: brightness(90%);
+}
+
+body.dark-mode .intro,
+body.dark-mode .content {
+  color: #f1f1f1;
+}
+
+body.dark-mode .project-card,
+body.dark-mode .aboutme .item {
+  background-color: #232323;
+  color: #f1f1f1;
+  border-color: #444;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .navbar .button a {
+  color: #f1f1f1;
+}
+
+body.dark-mode .navbar .button a:hover {
+  color: #ffc107;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode .form-control {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border-color: #444;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #bbb;
+}
+
+body.dark-mode label {
+  color: #f1f1f1;
+}
+
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.skill-box:hover .skill-icon {
+  transform: scale(1.1);
+}
+.button a {
+      text-decoration: none;
+      color: #343a40;
+      font-weight: 600;
+    }
+
+    .container {
+      padding: 2rem;
+    }
+
+    .project-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      cursor: pointer;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    
+
+    .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #000;
+      cursor: pointer;
+    }
+
+    a.text-warning {
+      color: #ffc107;
+    }
